@@ -6,19 +6,16 @@
 
 main:
    - title: "Portfolio"
-    url: /portfolio/
-    
-   - title: "Blog Posts"
-    url: /year-archive/
+     url: /portfolio/
     
    - title: "Notes"
-    url: /Notes/    
+     url: /notes/    
     
    - title: "Thoughts"
-    url: /Thoughts/  
+     url: /thoughts/  
 
    - title: "Blog Posts"
-    url: /year-archive/
+     url: /year-archive/
     
    - title: "Guide"
-    url: /markdown/
+     url: /markdown/
