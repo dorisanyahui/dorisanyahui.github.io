@@ -8,23 +8,14 @@ main:
 
 
 
-  - title: "Portfolio"
+   - title: "Portfolio"
     url: /portfolio/
-    
-    
- - title: "Blog Posts"
+   - title: "Blog Posts"
     url: /year-archive/
-
-  
-
-  - title: "Notes"
+   - title: "Notes"
     url: /Notes/    
     
-
-  - title: "Thoughts"
+   - title: "Thoughts"
     url: /Thoughts/         
- 
-    
-    
-  - title: "Guide"
+   - title: "Guide"
     url: /markdown/
