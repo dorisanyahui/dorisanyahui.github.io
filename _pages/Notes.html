@@ -7,13 +7,6 @@ author_profile: true
 
 {% include base_path %}
 
-{% capture written_year %}'None'{% endcapture %}
-{% assign notes = site.notes | sort: 'date' | reverse %}
-{% for note in notes %}
-  {% capture year %}{{ note.date | date: '%Y' }}{% endcapture %}
-  {% if year != written_year %}
-    <h2 id="{{ year | slugify }}" class="archive__subtitle">{{ year }}</h2>
-    {% capture written_year %}{{ year }}{% endcapture %}
-  {% endif %}
+{% for post in site.notes reversed %}
   {% include archive-single.html %}
 {% endfor %}
