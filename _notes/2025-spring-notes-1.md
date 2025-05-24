@@ -1,5 +1,5 @@
 ---
-title: "virtualization Learning-1"
+title: "Type of Hypervisor"
 collection: notes
 type: "virtualization"
 permalink: /notes/virtualization Learning-1
@@ -8,13 +8,13 @@ date: 2025-05-22
 location: "Alberta, Canada"
 ---
 
-This is a notes of a learning experience. You can use markdown like any other post.
+Here's a simple explanation of the types of hypervisors
 
-They type of hypervisor
-Types of Hypervisors 
+## The types of hypervisor
+
 A hypervisor is software that allows you to create and run virtual machines (VMs). There are two main types:
 
-1. Type 1 Hypervisor (also called Bare-metal Hypervisor)
+### 1. Type 1 Hypervisor (also called Bare-metal Hypervisor)
 It runs directly on the physical hardware (not on top of an operating system).
 
 It's like the main controller of the computer.
@@ -35,7 +35,7 @@ Proxmox VE (built on KVM)
 
 🟢 Faster and more efficient because it talks directly to hardware.
 
-2. Type 2 Hypervisor (also called Hosted Hypervisor)
+### 2. Type 2 Hypervisor (also called Hosted Hypervisor)
 It runs inside an existing operating system, like a normal application.
 
 It uses the host OS to access hardware (slower than Type 1).
@@ -59,8 +59,4 @@ Parallels Desktop (for Mac)
 | Type 2 | On top of OS         | Home users, developers | VirtualBox, VMware Workstation |
 
 
-Hello 2
-======
 
-Hello 3
-======
