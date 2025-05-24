@@ -5,17 +5,31 @@
 # prevent it from being included in the site.
 
 main:
-   - title: "Portfolio"
-     url: /portfolio/
-    
-   - title: "Notes"
-     url: /notes/    
-    
-   - title: "Thoughts"
-     url: /thoughts/  
+  - title: "📁 Portfolio"
+    url: /portfolio/
 
-   - title: "Blog Posts"
-     url: /year-archive/
+  - title: "📝 Notes"
+    children:
+      - title: "🧱 Server"
+        url: /notes/#server
+      - title: "🖥️ Virtualization"
+        url: /notes/#virtualization
+      - title: "☁️ Cloud"
+        url: /notes/#cloud
+      - title: "🌐 Networking"
+        url: /notes/#networking
+      - title: "🐍 Python"
+        url: /notes/#python
+
+  - title: "💭 Thoughts"
+    url: /thoughts/
+
+  - title: "📚 Blog Posts"
+    url: /year-archive/
+
+  - title: "👩‍💻 About"
+    url: /about/
+
     
-   - title: "Guide"
-     url: /markdown/
+ #  - title: "Guide"
+ #   url: /markdown/
