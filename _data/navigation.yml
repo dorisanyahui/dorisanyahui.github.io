@@ -9,17 +9,19 @@ main:
     url: /portfolio/
 
   - title: "📝 Notes"
+    url: /notes/
     children:
-      - title: "🧱 Server"
-        url: /notes/#server
-      - title: "🖥️ Virtualization"
-        url: /notes/#virtualization
-      - title: "☁️ Cloud"
-        url: /notes/#cloud
-      - title: "🌐 Networking"
-        url: /notes/#networking
-      - title: "🐍 Python"
-        url: /notes/#python
+    - title: "🧱 Server"
+      url: /notes/#server
+    - title: "🖥️ Virtualization"
+      url: /notes/#virtualization
+    - title: "☁️ Cloud"
+      url: /notes/#cloud
+    - title: "🌐 Networking"
+      url: /notes/#networking
+    - title: "🐍 Python"
+      url: /notes/#python
+
 
   - title: "💭 Thoughts"
     url: /thoughts/
