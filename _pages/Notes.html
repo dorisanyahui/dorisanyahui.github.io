@@ -14,8 +14,22 @@ author_profile: true
     <h2 id="{{ group.name | slugify }}" class="archive__subtitle">{{ group.name | capitalize }}</h2>
 
     {% assign sorted_notes = group.items | sort: "date" | reverse %}
+
     {% for note in sorted_notes %}
-      {% include archive-single.html %}
+      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+        <h3 class="archive__item-title" itemprop="headline">
+          <a href="{{ note.url | relative_url }}" rel="permalink">{{ note.title }}</a>
+        </h3>
+        {% if note.excerpt %}
+          <p class="archive__item-excerpt" itemprop="description">
+            {{ note.excerpt | strip_html | truncate: 160 }}
+          </p>
+        {% endif %}
+        <p class="archive__item-meta">
+          <small>Published: {{ note.date | date: "%B %d, %Y" }}</small>
+        </p>
+      </article>
     {% endfor %}
+
   {% endif %}
 {% endfor %}
