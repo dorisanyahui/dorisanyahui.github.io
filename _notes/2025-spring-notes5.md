@@ -2,7 +2,7 @@
 title: "Type of Hypervisor"
 layout: single
 collection: notes
-category: "virtualization"
+category: "cloud"
 permalink: /notes/notes5
 venue: "SAIT, ITS"
 date: 2025-05-22

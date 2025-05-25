@@ -16,20 +16,18 @@ author_profile: true
     {% assign sorted_notes = group.items | sort: "date" | reverse %}
 
     {% for note in sorted_notes %}
-      <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
-        <h3 class="archive__item-title" itemprop="headline">
-          <a href="{{ note.url | relative_url }}" rel="permalink">{{ note.title }}</a>
+      <div class="archive__item">
+        <h3 class="archive__item-title">
+          <a href="{{ note.url | relative_url }}">{{ note.title }}</a>
         </h3>
+        <p><small>{{ note.date | date: "%B %d, %Y" }}</small></p>
         {% if note.excerpt %}
-          <p class="archive__item-excerpt" itemprop="description">
-            {{ note.excerpt | strip_html | truncate: 160 }}
-          </p>
+          <p>{{ note.excerpt | strip_html | truncate: 150 }}</p>
+        {% else %}
+          <p>{{ note.content | strip_html | truncate: 150 }}</p>
         {% endif %}
-        <p class="archive__item-meta">
-          <small>Published: {{ note.date | date: "%B %d, %Y" }}</small>
-        </p>
-      </article>
+      </div>
+      <hr />
     {% endfor %}
-
   {% endif %}
 {% endfor %}
