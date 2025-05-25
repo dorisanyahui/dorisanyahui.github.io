@@ -1,8 +1,8 @@
 ---
 title: "Type of Hypervisor"
 collection: notes
-type: "virtualization"
-permalink: /notes/virtualization Learning-1
+category: "virtualization"
+permalink: /notes/notes1
 venue: "SAIT, ITS"
 date: 2025-05-22
 location: "Alberta, Canada"
