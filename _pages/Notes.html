@@ -10,7 +10,7 @@ author_profile: true
 {% assign grouped_notes = site.notes | group_by: "category" %}
 
 {% for group in grouped_notes %}
-  {% assign sorted_notes = group.items | sort: "date" | reverse %}
+  {% assign sorted_notes = group.items | sort: "date" | reverse | to_array %}
   {% assign first_three = sorted_notes | slice: 0, 3 %}
   {% assign rest_notes = sorted_notes | slice: 3, sorted_notes.size %}
 
