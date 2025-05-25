@@ -1,5 +1,6 @@
 ---
 title: "Teaching experience 2"
+layout: single
 collection: notes
 category: "virtualization"
 permalink: /notes/notes2
