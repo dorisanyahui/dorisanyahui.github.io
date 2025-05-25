@@ -244,47 +244,32 @@
   }
 }
 
-/* Doris: 优化 Notes 页面样式（紧凑美观版） */
-
-.archive__subtitle {
-  font-size: 1.5rem;
-  color: #000;
-  margin-top: 1.5rem;
-  margin-bottom: 0.5rem;
-  padding-bottom: 0.2rem;
-  border-bottom: 1px solid #ccc;
-  border-left: 4px solid #3498db; /* 蓝色竖线增强层次 */
-  padding-left: 0.5rem;
-}
+/* Doris: 进一步压缩文章之间的间隔 */
 
 .archive__item {
-  padding-bottom: 0.8rem;
-  margin-bottom: 0.8rem;
-  border-bottom: 1px dotted #ddd;
+  padding-bottom: 0.5rem;   /* 原来是 0.8rem */
+  margin-bottom: 0.5rem;    /* 原来是 0.8rem */
+  border-bottom: none;      /* 去掉分隔线，更紧凑视觉 */
 }
 
 .archive__item-title {
-  font-size: 1.1rem;
-  margin-bottom: 0.2rem;
-  line-height: 1.4;
+  font-size: 1.05rem;
+  margin-bottom: 0.1rem;
+  line-height: 1.3;
 }
 
 .archive__item-meta {
-  font-size: 0.85rem;
+  font-size: 0.8rem;
   color: #666;
-  margin-bottom: 0.3rem;
+  margin-bottom: 0.2rem;
 }
 
 .archive__item-excerpt {
-  font-size: 0.95rem;
-  line-height: 1.5;
-  margin-bottom: 0.6rem;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  margin-bottom: 0.4rem;
 }
 
-details summary {
-  font-size: 0.95rem;
-  font-weight: 500;
-  margin-top: 0.8rem;
-  cursor: pointer;
-  color: #444;
+details .archive__item {
+  margin-top: 0.3rem; /* 折叠中的间距也缩小 */
 }
