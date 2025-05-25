@@ -7,6 +7,28 @@ author_profile: true
 
 {% include base_path %}
 
-{% for post in site.notes reversed %}
-  {% include archive-single.html %}
+{% assign grouped_notes = site.notes | group_by: "category" %}
+
+{% for group in grouped_notes %}
+  <h2 id="{{ group.name | slugify }}" class="archive__subtitle">{{ group.name | capitalize }}</h2>
+
+  {% assign sorted_notes = group.items | sort: 'date' | reverse %}
+  {% assign first_three = sorted_notes | slice: 0, 3 %}
+  {% assign rest_notes = sorted_notes | slice: 3, sorted_notes.size %}
+
+  <!-- 显示前 3 篇 -->
+  {% for note in first_three %}
+    {% include archive-single.html %}
+  {% endfor %}
+
+  {% if rest_notes.size > 0 %}
+    <details>
+      <summary style="cursor: pointer; font-weight: bold; margin: 0.5em 0;">展开查看其他 Notes</summary>
+      <div style="margin-top: 0.5em;">
+        {% for note in rest_notes %}
+          {% include archive-single.html %}
+        {% endfor %}
+      </div>
+    </details>
+  {% endif %}
 {% endfor %}
