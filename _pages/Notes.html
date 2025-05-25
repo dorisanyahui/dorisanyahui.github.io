@@ -11,10 +11,13 @@ author_profile: true
 
 {% for group in grouped_notes %}
   {% if group.name %}
-    <h2 id="{{ group.name | slugify }}" class="archive__subtitle">{{ group.name | capitalize }}</h2>
+    <h2 id="{{ group.name | slugify }}" class="archive__subtitle">
+      <a href="/notes/category/{{ group.name | slugify }}/">
+        {{ group.name | capitalize }}
+      </a>
+    </h2>
 
     {% assign sorted_notes = group.items | sort: "date" | reverse %}
-
     {% for note in sorted_notes %}
       <div class="archive__item">
         <h3 class="archive__item-title">
