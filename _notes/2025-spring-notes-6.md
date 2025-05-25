@@ -5,7 +5,7 @@ collection: notes
 category: "virtualization"
 permalink: /notes/notes6
 venue: "SAIT, ITS"
-date: 2025-05-224
+date: 2025-05-24
 location: "Alberta, Canada"
 ---
 
