@@ -244,46 +244,47 @@
   }
 }
 
-/* Doris: Display improvements for Notes page */
+/* Doris: 优化 Notes 页面样式（紧凑美观版） */
 
 .archive__subtitle {
-  font-size: 1.75rem;
+  font-size: 1.5rem;
   color: #000;
-  margin-top: 2.5rem;
-  margin-bottom: 1rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 2px solid #ccc;
-}
-
-.archive__item-title {
-  font-size: 1.2rem;
-  margin-bottom: 0.2rem;
-}
-
-.archive__item-meta {
+  margin-top: 1.5rem;
   margin-bottom: 0.5rem;
-  color: #666;
-  font-size: 0.95rem;
-}
-
-.archive__item-excerpt {
-  line-height: 1.6;
-  margin-bottom: 1.2rem;
-}
-
-details summary {
-  font-size: 1rem;
-  font-weight: bold;
-  color: #333;
-  margin-top: 1rem;
-  cursor: pointer;
-}
-
-details .archive__item {
-  margin-top: 1rem;
+  padding-bottom: 0.2rem;
+  border-bottom: 1px solid #ccc;
+  border-left: 4px solid #3498db; /* 蓝色竖线增强层次 */
+  padding-left: 0.5rem;
 }
 
 .archive__item {
-  padding-bottom: 1.2rem;
+  padding-bottom: 0.8rem;
+  margin-bottom: 0.8rem;
   border-bottom: 1px dotted #ddd;
+}
+
+.archive__item-title {
+  font-size: 1.1rem;
+  margin-bottom: 0.2rem;
+  line-height: 1.4;
+}
+
+.archive__item-meta {
+  font-size: 0.85rem;
+  color: #666;
+  margin-bottom: 0.3rem;
+}
+
+.archive__item-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.5;
+  margin-bottom: 0.6rem;
+}
+
+details summary {
+  font-size: 0.95rem;
+  font-weight: 500;
+  margin-top: 0.8rem;
+  cursor: pointer;
+  color: #444;
 }
