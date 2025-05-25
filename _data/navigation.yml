@@ -14,7 +14,7 @@ main:
     - title: "🧱 Server"
       url: /notes/#server
     - title: "🖥️ Virtualization"
-      url: /notes/#virtualization
+      url: /notes/#virtualizationS
     - title: "☁️ Cloud"
       url: /notes/#cloud
     - title: "🌐 Networking"
@@ -29,8 +29,8 @@ main:
   - title: "📚 Blog Posts"
     url: /year-archive/
 
-  - title: "👩‍💻 About"
-    url: /about/
+ # - title: "👩‍💻 About"
+ #   url: /about/
 
     
  #  - title: "Guide"
