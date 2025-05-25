@@ -1,5 +1,5 @@
 ---
-layout: archive
+layout: single
 title: "Virtualization Notes"
 permalink: /notes/category/virtualization/
 author_profile: true
