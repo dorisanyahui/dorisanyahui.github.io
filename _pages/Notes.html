@@ -29,3 +29,31 @@ author_profile: true
       <p class="archive__item-excerpt" itemprop="description">{{ first_note.excerpt | strip_html | truncate: 150 }}</p>
     {% else %}
       <p class="archive__item-excerpt" itemprop="description">{{ first_note.content | strip_html | truncate: 150 }}</p>
+    {% endif %}
+  </article>
+
+  {% if rest_notes.size > 0 %}
+    <details>
+      <summary style="cursor: pointer; font-weight: bold; margin: 1em 0;">
+        展开查看其他 Notes（共 {{ rest_notes.size }} 篇）
+      </summary>
+      <div style="margin-top: 0.5em;">
+        {% for note in rest_notes %}
+          <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+            <h3 class="archive__item-title" itemprop="headline">
+              <a href="{{ note.url | relative_url }}" rel="permalink">{{ note.title }}</a>
+            </h3>
+            <p class="archive__item-meta">
+              <small>{{ note.date | date: "%B %d, %Y" }}</small>
+            </p>
+            {% if note.excerpt %}
+              <p class="archive__item-excerpt" itemprop="description">{{ note.excerpt | strip_html | truncate: 150 }}</p>
+            {% else %}
+              <p class="archive__item-excerpt" itemprop="description">{{ note.content | strip_html | truncate: 150 }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </details>
+  {% endif %}
+{% endfor %}
