@@ -14,28 +14,48 @@ author_profile: true
   {% assign first_three = sorted_notes | slice: 0, 3 %}
   {% assign rest_notes = sorted_notes | slice: 3, sorted_notes.size %}
 
-  {% if sorted_notes.size > 0 %}
-    <h2 id="{{ group.name | slugify }}" class="archive__subtitle">
-      {{ group.name | capitalize }}
-    </h2>
+  <h2 id="{{ group.name | slugify }}" class="archive__subtitle">
+    {{ group.name | capitalize }}
+  </h2>
 
-    <!-- 前三篇 -->
-    {% for note in first_three %}
-      {% include archive-single.html %}
-    {% endfor %}
+  {% for note in first_three %}
+    <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+      <h3 class="archive__item-title" itemprop="headline">
+        <a href="{{ note.url | relative_url }}" rel="permalink">{{ note.title }}</a>
+      </h3>
+      <p class="archive__item-meta">
+        <small>{{ note.date | date: "%B %d, %Y" }}</small>
+      </p>
+      {% if note.excerpt %}
+        <p class="archive__item-excerpt" itemprop="description">{{ note.excerpt | strip_html | truncate: 150 }}</p>
+      {% else %}
+        <p class="archive__item-excerpt" itemprop="description">{{ note.content | strip_html | truncate: 150 }}</p>
+      {% endif %}
+    </article>
+  {% endfor %}
 
-    <!-- 折叠部分 -->
-    {% if rest_notes.size > 0 %}
-      <details>
-        <summary style="cursor: pointer; font-weight: bold; margin: 0.5em 0;">
-          展开查看其他 Notes
-        </summary>
-        <div style="margin-top: 0.5em;">
-          {% for note in rest_notes %}
-            {% include archive-single.html %}
-          {% endfor %}
-        </div>
-      </details>
-    {% endif %}
+  {% if rest_notes.size > 0 %}
+    <details>
+      <summary style="cursor: pointer; font-weight: bold; margin: 1em 0;">
+        展开查看其他 Notes
+      </summary>
+      <div style="margin-top: 0.5em;">
+        {% for note in rest_notes %}
+          <article class="archive__item" itemscope itemtype="http://schema.org/CreativeWork">
+            <h3 class="archive__item-title" itemprop="headline">
+              <a href="{{ note.url | relative_url }}" rel="permalink">{{ note.title }}</a>
+            </h3>
+            <p class="archive__item-meta">
+              <small>{{ note.date | date: "%B %d, %Y" }}</small>
+            </p>
+            {% if note.excerpt %}
+              <p class="archive__item-excerpt" itemprop="description">{{ note.excerpt | strip_html | truncate: 150 }}</p>
+            {% else %}
+              <p class="archive__item-excerpt" itemprop="description">{{ note.content | strip_html | truncate: 150 }}</p>
+            {% endif %}
+          </article>
+        {% endfor %}
+      </div>
+    </details>
   {% endif %}
 {% endfor %}
